@@ -6,5 +6,8 @@ export default {
   black_60: 'rgba(0, 0, 0, 0.6)',
 
   yellow: '#ffd666',
-  yellow_hover: '#96feff'
+  yellow_hover: '#96feff',
+
+  blue: '#15c3d6',
+  blue_hover: '#17d6eb'
 }
