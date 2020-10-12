@@ -1,5 +1,6 @@
 import React from 'react';
 import { FiArrowRight } from 'react-icons/fi'
+import { Link } from 'react-router-dom'
 
 import logoImg from '../../images/logo.svg'
 import colors from '../../styles/colors';
@@ -22,12 +23,12 @@ const Landing: React.FC = () => {
           <span>Amazonas</span>
         </div>
 
-        <a href="">
+        <Link to="/app">
           <FiArrowRight size={26} color={colors.black_60} />
-        </a>
+        </Link>
       </Content>
     </Container >
-  );
-};
+  )
+}
 
 export default Landing;
