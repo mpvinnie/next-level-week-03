@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { Map } from 'react-leaflet'
 
 import colors from '../../styles/colors';
 
