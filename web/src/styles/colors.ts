@@ -7,6 +7,7 @@ export default {
   bg_gray: '#ebf2f5',
   bg_green: '#3cdc8c',
   bg_map: '#e6f7fb',
+  bg_activy: '#edfff6',
   title: '#4d6f80',
   subtitle: '#5c8599',
 
@@ -15,6 +16,7 @@ export default {
   border: '#d3e2e5',
   border_map: '#b3dae2',
   border_green: '#a1e9c5',
+  border_dashed: '#96d2f0',
 
   yellow: '#ffd666',
   yellow_hover: '#96feff',
@@ -26,6 +28,9 @@ export default {
   green: '#39cc83',
   green_hover: '#36cf82',
   title_green: '#37c77f',
+
+  label: '#8fa7b3',
+  input: '#f5f8fa',
 
   button: '#12afcb',
 }
