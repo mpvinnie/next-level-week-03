@@ -121,12 +121,12 @@ const Orphanage: React.FC = () => {
                 {orphanage.open_on_weekends ? (
                   <p>
                     Atendemos <br />
-                    fim de semanada
+                    fim de semana
                   </p>
                 ) : (
                     <p>
                       Não atendemos <br />
-                    fim de semanada
+                    fim de semana
                     </p>
                   )}
 
