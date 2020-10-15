@@ -118,8 +118,18 @@ const Orphanage: React.FC = () => {
 
               <OpenOnWeekendContainer open_on_weekends={orphanage.open_on_weekends}>
                 <FiInfo size={32} />
-                Atendemos <br />
-                fim de semanada
+                {orphanage.open_on_weekends ? (
+                  <p>
+                    Atendemos <br />
+                    fim de semanada
+                  </p>
+                ) : (
+                    <p>
+                      Não atendemos <br />
+                    fim de semanada
+                    </p>
+                  )}
+
               </OpenOnWeekendContainer>
             </OpenDetails>
 
@@ -131,7 +141,7 @@ const Orphanage: React.FC = () => {
         </DetailsContainer>
       </Content>
     </Container>
-  );
-};
+  )
+}
 
 export default Orphanage;
