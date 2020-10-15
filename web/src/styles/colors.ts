@@ -4,6 +4,7 @@ export default {
   bg_sidebar: 'linear-gradient(329.54deg, #15b6d6 0%, #15d6d6 100%)',
   bg_hours: 'linear-gradient(149.97deg, #e6f7fb 8.13%, #fff 92.67%)',
   bg_weekends: 'linear-gradient(154.16deg, #edfff6 7.85%, #fff 91.03%)',
+  bg_noweekends: 'linear-gradient(154.16deg, #fdf0f5 7.85%, #fff 91.03%)',
   bg_gray: '#ebf2f5',
   bg_green: '#3cdc8c',
   bg_map: '#e6f7fb',
@@ -16,6 +17,7 @@ export default {
   border: '#d3e2e5',
   border_map: '#b3dae2',
   border_green: '#a1e9c5',
+  border_red: '#ffbcd4',
   border_dashed: '#96d2f0',
 
   yellow: '#ffd666',
@@ -28,6 +30,8 @@ export default {
   green: '#39cc83',
   green_hover: '#36cf82',
   title_green: '#37c77f',
+
+  red: '#ff669d',
 
   label: '#8fa7b3',
   input: '#f5f8fa',

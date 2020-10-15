@@ -5,6 +5,10 @@ interface IButtonImageProps {
   active?: boolean
 }
 
+interface IOpenOnWeekendsProps {
+  open_on_weekends: boolean
+}
+
 export const Container = styled.div`
   display: flex;
   min-height: 100vh;
@@ -90,6 +94,31 @@ export const OrphanageDetails = styled.div`
     line-height: 46px;
     color: ${colors.title};
   }
+
+  > button {
+    margin-top: 64px;
+
+    width: 100%;
+    height: 64px;
+    background: ${colors.bg_green};
+    border-radius: 20px;
+    color: ${colors.primary};
+    font-weight: 800;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: background-color 0.2s;
+
+    &:hover {
+      background: ${colors.green_hover};
+    }
+
+    svg {
+      margin-right: 16px;
+    }
+  }
 `
 
 export const MapContainer = styled.div`
@@ -116,50 +145,44 @@ export const OpenDetails = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 20px;
+`
 
-  div {
-    padding: 32px 24px;
-    border-radius: 20px;
-    line-height: 28px;
+export const OpeningHoursContainer = styled.div`
+  padding: 32px 24px;
+  border-radius: 20px;
+  line-height: 28px;
 
-    background: ${colors.bg_hours};
-    border: 1px solid ${colors.border_map};
-    color: ${colors.subtitle};
+  background: ${colors.bg_hours};
+  border: 1px solid ${colors.border_map};
+  color: ${colors.subtitle};
 
-    > svg {
-      display: block;
-      margin-bottom: 20px;
-    }
+  > svg {
+    display: block;
+    margin-bottom: 20px;
+  }
+`
 
-    & + div {
-      background: ${colors.bg_weekends};
-      border: 1px solid ${colors.border_green};
-      color: ${colors.title_green};
-    }
+export const OpenOnWeekendContainer = styled.div<IOpenOnWeekendsProps>`
+  padding: 32px 24px;
+  border-radius: 20px;
+  line-height: 28px;
+  background: ${colors.bg_noweekends};
+  border: 1px solid ${colors.border_red};
+  color: ${colors.red};
+
+  svg {
+    display: block;
+    margin-bottom: 20px;
+    color: ${colors.red};
   }
 
-  > button {
-    margin-top: 64px;
-
-    width: 100%;
-    height: 64px;
-    background: ${colors.bg_green};
-    border-radius: 20px;
-    color: ${colors.primary};
-    font-weight: 800;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    transition: background-color 0.2s;
-
-    &:hover {
-      background: ${colors.green_hover};
-    }
+  ${props => props.open_on_weekends && css`
+    background: ${colors.bg_weekends};
+    border: 1px solid ${colors.border_green};
+    color: ${colors.title_green};
 
     svg {
-      margin-right: 16px;
+      color: ${colors.green};
     }
-  }
+  `}
 `
