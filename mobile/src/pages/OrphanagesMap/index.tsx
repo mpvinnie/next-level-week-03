@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useCallback } from 'react'
 import { Callout, Marker, PROVIDER_GOOGLE } from 'react-native-maps'
 import { Feather } from '@expo/vector-icons'
+import { useNavigation } from '@react-navigation/native'
 
 import {
   MapContainer,
@@ -15,6 +16,12 @@ import {
 import mapMarker from '../../images/map-marker.png'
 
 const OrphanagesMap: React.FC = () => {
+  const navigation = useNavigation()
+
+  const handleNavigateToOrphanageDetails = useCallback(() => {
+    navigation.navigate('OrphanageDetails')
+  }, [])
+
   return (
     <MapContainer>
       <Map
@@ -37,12 +44,7 @@ const OrphanagesMap: React.FC = () => {
             longitude: -60.0193848
           }}
         >
-          <Callout
-            tooltip
-            onPress={() => {
-              /* */
-            }}
-          >
+          <Callout tooltip onPress={handleNavigateToOrphanageDetails}>
             <CalloutContainer>
               <CalloutText>Lar das Meninas</CalloutText>
             </CalloutContainer>
