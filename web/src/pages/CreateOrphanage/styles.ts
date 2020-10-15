@@ -109,12 +109,35 @@ export const InputContainer = styled.div`
     padding: 16px;
     line-height: 28px;
   }
-  
-  > button {
-    width: 100%;
-    height: 64px;
+
+  input[type=file] {
+    display: none;
+  }
+`
+
+export const ImagesContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 16px;  
+
+  label {
+    &:hover {
+      cursor: pointer;
+    }
+    height: 96px;
     background: ${colors.input};
     border: 1px dashed ${colors.border_dashed};
+    border-radius: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  img {
+    width: 100%;
+    height: 96px;
+    object-fit: cover;
     border-radius: 20px;
   }
 `
@@ -132,6 +155,7 @@ export const SelectButton = styled.button<ISelectButtonProps>`
 
   ${props => props.active && css`
     background: ${colors.bg_activy};
+    color: ${colors.green};
   `}
 
   &:first-child {
