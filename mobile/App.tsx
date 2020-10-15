@@ -1,19 +1,26 @@
-import { StatusBar } from 'expo-status-bar'
+// import { StatusBar } from 'expo-status-bar'
 import React from 'react'
-import { StyleSheet, View } from 'react-native'
+import { useFonts } from 'expo-font'
+import {
+  Nunito_600SemiBold,
+  Nunito_700Bold,
+  Nunito_800ExtraBold
+} from '@expo-google-fonts/nunito'
+
+import Routes from './src/routes'
 
 const App: React.FC = () => {
-  return (
-    <View style={styles.container}>
-      <StatusBar style="auto" />
-    </View>
-  )
-}
+  const [fontLoaded] = useFonts({
+    nunito600: Nunito_600SemiBold,
+    nunito700: Nunito_700Bold,
+    nunito800: Nunito_800ExtraBold
+  })
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-})
+  if (!fontLoaded) {
+    return null
+  }
+
+  return <Routes />
+}
 
 export default App
