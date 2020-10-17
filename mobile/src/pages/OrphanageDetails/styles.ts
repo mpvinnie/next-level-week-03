@@ -50,7 +50,7 @@ export const Map = styled(MapView)`
   height: 150px;
 `
 
-export const RoutesContainer = styled.View`
+export const RoutesButtonContainer = styled.TouchableOpacity`
   padding: 16px;
   align-items: center;
   justify-content: center;
@@ -89,6 +89,15 @@ export const ScheduleItemInfo = styled.View`
   background: #edfff6;
   border-width: 1px;
   border-color: #a1e9c5;
+  border-radius: 20px;
+`
+
+export const ScheduleItemInfoRed = styled.View`
+  width: 48%;
+  padding: 20px;
+  background: #fef6f9;
+  border-width: 1px;
+  border-color: #ffbcd4;
   border-radius: 20px;
 `
 
